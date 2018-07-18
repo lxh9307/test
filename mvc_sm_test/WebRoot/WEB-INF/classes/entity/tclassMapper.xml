@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="dao.Regdao">
+<!-- 如果实体类字段跟数据库一致，可以不写resultMap-->
+	<select id="queryAll" resultType="tclass">
+		select * from t_class
+	</select>
+</mapper>
