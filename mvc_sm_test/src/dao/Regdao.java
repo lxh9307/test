@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface Regdao {
-		public List queryAll();
+		public List queryAll_hy();
+		public List queryAll_ltjl();
+		public List queryAll_users();
 }

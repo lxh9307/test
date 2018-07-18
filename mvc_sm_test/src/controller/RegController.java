@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import entity.TClass;
+import entity.Users;
 
 import service.RegService;
 
@@ -19,7 +19,7 @@ public class RegController {
 	
 	@RequestMapping("/queryAll")
 	public String queryAll(ModelMap map){
-		List<TClass> list=rs.queryAll();
+		List<Users> list=rs.queryAll_users();
 		map.put("list", list);
 		return "/index.jsp";
 	}

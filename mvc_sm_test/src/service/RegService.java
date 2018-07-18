@@ -14,7 +14,15 @@ public class RegService {
 	  @Autowired 
 	  private Regdao regdao;
 	  
-	  public List queryAll(){
-		   return regdao.queryAll();
+	  public List queryAll_hy(){
+		   return regdao.queryAll_hy();
+	  }
+	  
+	  public List queryAll_ltjl(){
+		   return regdao.queryAll_ltjl();
+	  }
+	  
+	  public List queryAll_users(){
+		   return regdao.queryAll_users();
 	  }
 }
