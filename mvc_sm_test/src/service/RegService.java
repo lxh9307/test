@@ -7,22 +7,27 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import dao.Regdao;
+import entity.Users;
 
-@Service
 @Transactional
+@Service
 public class RegService {
 	  @Autowired 
-	  private Regdao regdao;
+	   Regdao regdao;
 	  
-	  public List queryAll_hy(){
-		   return regdao.queryAll_hy();
-	  }
-	  
-	  public List queryAll_ltjl(){
-		   return regdao.queryAll_ltjl();
-	  }
+//	  public List queryAll_hy(){
+//		   return regdao.queryAll_hy();
+//	  }
+//	  
+//	  public List queryAll_ltjl(){
+//		   return regdao.queryAll_ltjl();
+//	  }
 	  
 	  public List queryAll_users(){
 		   return regdao.queryAll_users();
+	  }
+	  
+	  public int adduser(Users user){
+		  return regdao.adduser(user);
 	  }
 }
