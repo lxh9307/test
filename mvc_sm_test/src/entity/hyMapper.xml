@@ -3,9 +3,9 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="dao.Regdao">
-<!-- 如果实体类字段跟数据库一致，可以不写resultMap-->
-	<select id="queryAll_hy" resultType="tclass">
-		select * from hy
+<mapper namespace="dao.Hydao">
+ 如果实体类字段跟数据库一致，可以不写resultMap
+	<select id="queryAll_hy" resultType="Users" parameterType='map'>
+		select * from users where id in (select hyid from hy where userid=#{userid})
 	</select>
 </mapper>

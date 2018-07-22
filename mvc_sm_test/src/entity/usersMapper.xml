@@ -5,7 +5,11 @@
 
 <mapper namespace="dao.Regdao">
 <!-- 如果实体类字段跟数据库一致，可以不写resultMap-->
-	<select id="queryAll_users" resultType="tclass">
+	<select id="queryAll_users" resultType="users">
 		select * from users
 	</select>
+	
+	<insert id='adduser' parameterType='users' >
+	      insert into users(id,username,password,uname,tximg) valus(SEQUENCE_TEST.nextval(),#{username},#{password},#{uname},#{tximg})
+	</insert>
 </mapper>

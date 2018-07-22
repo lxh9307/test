@@ -3,9 +3,9 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="dao.Regdao">
+<mapper namespace="dao.Ltjldao">
 <!-- 如果实体类字段跟数据库一致，可以不写resultMap-->
-	<select id="queryAll_ltjl" resultType="tclass">
-		select * from ltjl
+	<select id="queryAll_ltjl" resultType="Ltjl" parameterType='map'>
+		select * from ltjl where fsid=#{userid} and jsid=#{hyid}
 	</select>
 </mapper>
